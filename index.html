@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emirates Prime Services</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Particles Background -->
+<div id="particles-js"></div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Premium Home Services in Dubai</h1>
+    <p>Car wash, Home cleaning, AC repair — delivered to your doorstep</p>
+    <a href="#booking" class="btn">Book Now</a>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="service-cards">
+    <div class="card" onclick="selectService('Car Wash')">🚗 Car Wash at Home</div>
+    <div class="card" onclick="selectService('Home Cleaning')">🏠 Home Cleaning</div>
+    <div class="card" onclick="selectService('AC Repair')">❄️ AC Repair</div>
+  </div>
+</section>
+
+<!-- Booking Form Section -->
+<section id="booking" class="booking">
+    <div class="container">
+        <h2 class="section-title">Book a Service</h2>
+        <p class="section-subtitle">Fill out the form below and we'll get back to you within 30 minutes</p>
+        
+        <div class="booking-container">
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">UAE Phone Number *</label>
+                    <div class="phone-input-wrapper">
+                        <span class="country-code">+971</span>
+                        <input type="tel" id="phone" name="phone" placeholder="50 123 4567" pattern="[0-9]{9}" maxlength="9" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location / Address *</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Select Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service...</option>
+                        <option value="Car Wash">🚗 Car Wash at Home</option>
+                        <option value="Home Cleaning">🏠 Home Cleaning</option>
+                        <option value="AC Repair">❄️ AC Repair & Maintenance</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    Submit Request
+                </button>
+            </form>
+            
+            <!-- Success / Confirmation Popup -->
+            <div id="successMessage" class="success-message">
+                <div class="success-icon">✓</div>
+                <h3>Request Ready to Send!</h3>
+                <p id="confirmText">Your request details are ready. Confirm to send via WhatsApp.</p>
+                <button id="confirmWhatsApp" class="btn btn-success">Send to WhatsApp</button>
+                <button class="btn btn-outline" onclick="resetForm()">Submit Another Request</button>
+            </div>
+        </div>
+    </div>
+</section>
+  
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: <a href="tel:+971585770783">+971 58 577 0783</a></p>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
